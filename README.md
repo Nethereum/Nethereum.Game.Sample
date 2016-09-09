@@ -6,6 +6,9 @@ A simple [smart contract deployed to Ethereum](https://github.com/Nethereum/Neth
 
 More information on UrhoSharp can be found [on the Xamarin website](https://developer.xamarin.com/guides/cross-platform/urho/introduction/), and in github [the original sample](https://github.com/xamarin/urho-samples/tree/master/SamplyGame).
 
+##Play along!!
+Change your private key [here](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Core/Ethereum/GameScoreService.cs#L25) to save you typing :), compile and deploy to your favourite device.
+
 ## Small video tutorial
 This video gives you a quick introduction on the sample:
 
