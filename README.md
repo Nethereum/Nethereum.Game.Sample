@@ -1,6 +1,6 @@
 This sample game demonstrates how to integrate Nethereum with the UrhoSharp SamplyGame (game sample) to create a cross-platform game that interacts with Ethereum.
 
-A simple [smart contract deployed to Ethereum](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Core/Ethereum/contracts/PlayerScore.sol) allows you to tracks the users high scores and the top scores. 
+A simple [smart contract deployed to Ethereum](https://github.com/Nethereum/Nethereum.Game.Sample/blob/master/Core/Ethereum/contracts/PlayerScore.sol) allows you to tracks the users high scores and the top scores. The sample uses private keys to sign "offline" transactions and use a public node for all the communication, this way avoids the local installation of an ethereum client.
 
 More information on UrhoSharp can be found [on the Xamarin website](https://developer.xamarin.com/guides/cross-platform/urho/introduction/), and in github [the original sample](https://github.com/xamarin/urho-samples/tree/master/SamplyGame).
 
