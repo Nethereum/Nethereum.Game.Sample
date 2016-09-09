@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80290692-9757-4755-AA3D-ABF785ED4D58}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SamplyGame.Droid</RootNamespace>
+    <AssemblyName>SamplyGame.Droid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <BundleAssemblies>False</BundleAssemblies>
+    <AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+    <Debugger>Xamarin</Debugger>
+    <AndroidEnableMultiDex>False</AndroidEnableMultiDex>
+    <AndroidSupportedAbis>armeabi,armeabi-v7a,x86,x86_64,arm64-v8a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.1\lib\netstandard1.3\crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EdjCase.JsonRpc.Client, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EdjCase.JsonRpc.Client.1.0.4\lib\netstandard1.1\EdjCase.JsonRpc.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EdjCase.JsonRpc.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EdjCase.JsonRpc.Core.1.0.4\lib\portable45-net45+win8+wpa81\EdjCase.JsonRpc.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Nethereum.Portable, Version=1.0.6057.30244, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nethereum.Portable.1.0.0-rc5\lib\portable45-net45+win8+wpa81\Nethereum.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Urho, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrhoSharp.1.1.125\lib\MonoAndroid\Urho.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Urho.Droid.SdlBinding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrhoSharp.1.1.125\lib\MonoAndroid\Urho.Droid.SdlBinding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <AndroidAsset Include="..\Assets\Data\Icon.png">
+      <Link>Assets\Data\Icon.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Splashscreen.png">
+      <Link>Assets\Data\Splashscreen.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Fonts\Anonymous Pro.ttf">
+      <Link>Assets\Data\Fonts\Anonymous Pro.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Fonts\Font.ttf">
+      <Link>Assets\Data\Fonts\Font.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Apple.xml">
+      <Link>Assets\Data\Materials\Apple.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Enemy3.xml">
+      <Link>Assets\Data\Materials\Enemy3.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Enemy3weapon.xml">
+      <Link>Assets\Data\Materials\Enemy3weapon.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Enemy4DD.xml">
+      <Link>Assets\Data\Materials\Enemy4DD.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Grass.xml">
+      <Link>Assets\Data\Materials\Grass.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\MachineGun.xml">
+      <Link>Assets\Data\Materials\MachineGun.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Monkey.xml">
+      <Link>Assets\Data\Materials\Monkey.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\Player1D.xml">
+      <Link>Assets\Data\Materials\Player1D.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Materials\PyramidMaterial.xml">
+      <Link>Assets\Data\Materials\PyramidMaterial.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Apple.mdl">
+      <Link>Assets\Data\Models\Apple.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Enemy3.mdl">
+      <Link>Assets\Data\Models\Enemy3.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Enemy3weapon.mdl">
+      <Link>Assets\Data\Models\Enemy3weapon.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Enemy4.mdl">
+      <Link>Assets\Data\Models\Enemy4.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Monkey.mdl">
+      <Link>Assets\Data\Models\Monkey.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Plane.mdl">
+      <Link>Assets\Data\Models\Plane.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Player1.mdl">
+      <Link>Assets\Data\Models\Player1.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\PyramidTree.mdl">
+      <Link>Assets\Data\Models\PyramidTree.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Models\Skull.mdl">
+      <Link>Assets\Data\Models\Skull.mdl</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\Explosion.pex">
+      <Link>Assets\Data\Particles\Explosion.pex</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\Explosion.png">
+      <Link>Assets\Data\Particles\Explosion.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\HeavyMissileExplosion.pex">
+      <Link>Assets\Data\Particles\HeavyMissileExplosion.pex</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\HeavyMissileExplosion.png">
+      <Link>Assets\Data\Particles\HeavyMissileExplosion.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\MissileTrace.pex">
+      <Link>Assets\Data\Particles\MissileTrace.pex</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\PlayerExplosion.pex">
+      <Link>Assets\Data\Particles\PlayerExplosion.pex</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Particles\PlayerExplosion.png">
+      <Link>Assets\Data\Particles\PlayerExplosion.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\PostProcess\FXAA3.xml">
+      <Link>Assets\Data\PostProcess\FXAA3.xml</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Sounds\BigExplosion.wav">
+      <Link>Assets\Data\Sounds\BigExplosion.wav</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Sounds\MachineGun.wav">
+      <Link>Assets\Data\Sounds\MachineGun.wav</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Sounds\Powerup.wav">
+      <Link>Assets\Data\Sounds\Powerup.wav</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Sounds\SmallExplosion.wav">
+      <Link>Assets\Data\Sounds\SmallExplosion.wav</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Apple.png">
+      <Link>Assets\Data\Textures\Apple.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Enemy3.png">
+      <Link>Assets\Data\Textures\Enemy3.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Enemy3weapon.png">
+      <Link>Assets\Data\Textures\Enemy3weapon.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Enemy4DD.png">
+      <Link>Assets\Data\Textures\Enemy4DD.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Grass.dds">
+      <Link>Assets\Data\Textures\Grass.dds</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Monkey.png">
+      <Link>Assets\Data\Textures\Monkey.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Player1D.png">
+      <Link>Assets\Data\Textures\Player1D.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\Pyramid.png">
+      <Link>Assets\Data\Textures\Pyramid.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\TreeUV2.png">
+      <Link>Assets\Data\Textures\TreeUV2.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\Textures\xamarin.png">
+      <Link>Assets\Data\Textures\xamarin.png</Link>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\SamplyGame.csproj">
+      <Project>{7C4B3936-72F4-49E0-B5A7-E1284863C8C4}</Project>
+      <Name>SamplyGame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Folder Include="Resources\layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\Assets\Data\Textures\UI.png">
+      <Link>Assets\Data\Textures\UI.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Assets\Data\UI\DefaultStyle.xml">
+      <Link>Assets\Data\UI\DefaultStyle.xml</Link>
+    </AndroidAsset>
+    <Content Include="UrhoSharpReadme.txt" />
+  </ItemGroup>
+  <Import Project="..\packages\UrhoSharp.1.1.125\build\MonoAndroid\UrhoSharp.targets" Condition="Exists('..\packages\UrhoSharp.1.1.125\build\MonoAndroid\UrhoSharp.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\UrhoSharp.1.1.125\build\MonoAndroid\UrhoSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UrhoSharp.1.1.125\build\MonoAndroid\UrhoSharp.targets'))" />
+  </Target>
+</Project>
