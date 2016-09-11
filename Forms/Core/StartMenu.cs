@@ -64,7 +64,7 @@ namespace SamplyGame
             lineEditPrivateKey.TextCopyable = true;   
             lineEditPrivateKey.Cursor.VerticalAlignment = VerticalAlignment.Center;
             lineEditPrivateKey.TextElement.VerticalAlignment = VerticalAlignment.Center;
-            lineEditPrivateKey.Text = Ethereum.GameScoreService.PRIVATE_KEY;
+           // lineEditPrivateKey.Text = Ethereum.GameScoreService.PRIVATE_KEY;
 
 
             lineEditUrl = new LineEdit();
@@ -72,7 +72,7 @@ namespace SamplyGame
             lineEditUrl.Cursor.VerticalAlignment = VerticalAlignment.Center;
             lineEditUrl.TextElement.VerticalAlignment = VerticalAlignment.Center;
             lineEditUrl.TextCopyable = true;
-            lineEditUrl.Text = Ethereum.GameScoreService.DEFAULT_MORDEN;
+           // lineEditUrl.Text = Ethereum.GameScoreService.DEFAULT_MORDEN;
 
             // Add controls to Window
 
@@ -112,8 +112,8 @@ namespace SamplyGame
         {
             if(Ethereum.GameScoreService.Current == null)
             {
-                this.lineEditPrivateKey.Text = Ethereum.GameScoreService.PRIVATE_KEY;
-                this.lineEditUrl.Text = Ethereum.GameScoreService.DEFAULT_MORDEN;
+               // this.lineEditPrivateKey.Text = Ethereum.GameScoreService.PRIVATE_KEY;
+               // this.lineEditUrl.Text = Ethereum.GameScoreService.DEFAULT_MORDEN;
             }
             else
             {

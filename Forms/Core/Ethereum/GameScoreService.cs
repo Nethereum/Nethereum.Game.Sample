@@ -19,12 +19,7 @@ namespace SamplyGame.Ethereum
     }
     
     public class GameScoreService
-    {
-        public static string DEFAULT_MORDEN = "https://morden.infura.io/aEcNY6wGN4KuEpoXQRxZ";
-       
-        //public static string PRIVATE_KEY = "0x822b4de0c646385ab8d1a29313e01a31c50d79e634809b4c90e67b00a4328401";
-        public static string PRIVATE_KEY = "0xaf98a1bdf2140578318e2c5e7d5956a3ee0a6732090c2991a9166a6639ad368f";
-      
+    { 
         private string abi = "[{'constant':false,'inputs':[{'name':'score','type':'int256'}],'name':'setTopScore','outputs':[],'type':'function'},{'constant':true,'inputs':[{'name':'','type':'uint256'}],'name':'topScores','outputs':[{'name':'addr','type':'address'},{'name':'score','type':'int256'}],'type':'function'},{'constant':false,'inputs':[],'name':'getCountTopScores','outputs':[{'name':'','type':'uint256'}],'type':'function'},{'constant':true,'inputs':[{'name':'','type':'address'}],'name':'userTopScores','outputs':[{'name':'','type':'int256'}],'type':'function'}]";
         private string contractAddress = "0x87B7A7D7c81EC400b29aA59EFAB915a9493f6e94";
         private int topScoreCache = -1;
@@ -34,6 +29,14 @@ namespace SamplyGame.Ethereum
         public static void Init(string privateKey, string url)
         {
             Current = new GameScoreService(privateKey, url);
+        }
+
+        public static void InitFromSettings()
+        {
+            if(!String.IsNullOrEmpty(Settings.PrivateKeySetting) && !String.IsNullOrEmpty(Settings.UrlSetting))
+            {
+                Init(Settings.PrivateKeySetting, Settings.UrlSetting);
+            }
         }
 
         public string PrivateKey { get; private set; }

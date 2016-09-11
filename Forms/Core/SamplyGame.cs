@@ -12,8 +12,10 @@ namespace SamplyGame
 	public class SamplyGame : Application
 	{
 		const string CoinstFormat = "{0} coins";
+        const string HsCoinstFormat = "HS: {0} coins";
 
 		public int Coins { get; private set; }
+        public int HsCoins { get; set; }
         public StartMenu StartMenu { get; private set; }
 
         public event Action<StartMenu> NewStartMenu;
@@ -22,8 +24,8 @@ namespace SamplyGame
 
         Scene scene;
 		Text coinsText;
-
-		public Player Player { get; private set; }
+        Text hsCoinsText;
+        public Player Player { get; private set; }
 
 		public Viewport Viewport { get; private set; }
 
@@ -89,11 +91,16 @@ namespace SamplyGame
 			coinsText.HorizontalAlignment = HorizontalAlignment.Right;
 			coinsText.SetFont(ResourceCache.GetFont(Assets.Fonts.Font), Graphics.Width / 20);
 			UI.Root.AddChild(coinsText);
-			Input.SetMouseVisible(true, false);
-            
+			
 
-			// Background
-			var background = new Background();
+            hsCoinsText = new Text();
+            hsCoinsText.HorizontalAlignment = HorizontalAlignment.Left;
+            hsCoinsText.SetFont(ResourceCache.GetFont(Assets.Fonts.Font), Graphics.Width / 20);
+            UI.Root.AddChild(hsCoinsText);
+            Input.SetMouseVisible(true, false);
+
+            // Background
+            var background = new Background();
 			scene.AddComponent(background);
 			background.Start();
 
@@ -163,7 +170,14 @@ namespace SamplyGame
 				Player.Node.AddComponent(new MassMachineGun());
 			}
 			Coins = amount;
+
+            if(Coins > HsCoins)
+            {
+                HsCoins = Coins;
+            }
+
 			coinsText.Value = string.Format(CoinstFormat, Coins);
+            hsCoinsText.Value = string.Format(HsCoinstFormat, HsCoins);
 		}
 	}
 }

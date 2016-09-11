@@ -80,7 +80,7 @@ namespace SamplyGame
                 bool passed = true;
                 try
                 {
-                    GameScoreService.Init(Settings.PrivateKeySetting, Settings.UrlSetting); 
+                    GameScoreService.Init(privKeyEntry.Text, urlEntry.Text); 
                 }
                 catch
                 {
@@ -122,8 +122,10 @@ namespace SamplyGame
                     urlEntry,
                     cancelButton,
                     saveButton
-                }
-            };
+                },
+                VerticalOptions = LayoutOptions.CenterAndExpand
+
+        };
         }
     }
 
@@ -139,7 +141,6 @@ namespace SamplyGame
             urhoSurface = new UrhoSurface();
             urhoSurface.VerticalOptions = LayoutOptions.FillAndExpand;
 
-            Title = " UrhoSharp + Xamarin.Forms";
             Content = new StackLayout
             {
                 Padding = 0,
@@ -155,7 +156,7 @@ namespace SamplyGame
 
         private async void SettingsPage_SettingsChanged()
         {
-            await ShowTopScores(game.StartMenu);  
+            await ShowTopScores(game.StartMenu).ContinueWith(HandleError);  
         }
 
         protected override async void OnAppearing()
@@ -173,6 +174,8 @@ namespace SamplyGame
                 game.NewStartMenu += Game_NewStartMenu;
                 game.RemovedStartMenu += Game_RemovedStartMenu;
                 game.StartMenu.ShowSettingsClicked += StartMenu_ShowSettingsClicked;
+                GameScoreService.InitFromSettings();
+                await ShowTopScores(game.StartMenu);
             }
             
         }
@@ -185,13 +188,24 @@ namespace SamplyGame
         private async void Game_NewStartMenu(StartMenu newStartMenu)
         {
             newStartMenu.ShowSettingsClicked += StartMenu_ShowSettingsClicked;
-            await ShowTopScores(newStartMenu);
+            await ShowTopScores(newStartMenu).ContinueWith(HandleError);
            
         }
+
+        public void HandleError(Task action)
+        {
+            if (action.IsFaulted)
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                await DisplayAlert("Error", "There was an error retrieving the top scores, please check your settings, internet connection", "OK"));
+            }
+        }
+        
 
         private void StartMenu_ShowSettingsClicked()
         {
             Device.BeginInvokeOnMainThread(async () => {
+
                 //no animation as it won't render fully until touched on android device
                 await this.Navigation.PushModalAsync(settingsPage, false);
                 settingsPage.ForceLayout();
@@ -202,30 +216,24 @@ namespace SamplyGame
 
         public async Task ShowTopScores(StartMenu startMenu)
         {
-            try
-            {
-                if (GameScoreService.Current != null)
+          
+            if (GameScoreService.Current != null)
+            {                 
+                startMenu.TopPlayersText = previousTopScores ?? "";
+                var topScores = await GameScoreService.Current.GetTopScoresAsync();
+                var text = "\n\nTOP PLAYERS\n\n";
+                foreach (var score in topScores)
                 {
-                    
-                    if (string.IsNullOrEmpty(startMenu.TopPlayersText))
-                    {
-                        startMenu.TopPlayersText = previousTopScores ?? "";
-                        var topScores = await GameScoreService.Current.GetTopScoresAsync();
-                        var text = "\n\nTOP PLAYERS\n\n";
-                        foreach (var score in topScores)
-                        {
-                            text = text + score.Address.Substring(0, 15) + "...  " + score.Score + "\n";
-                        }
-                        startMenu.TopPlayersText = text;
-                        previousTopScores = text;
-                    }
+                    text = text + score.Address.Substring(0, 15) + "...  " + score.Score + "\n";
                 }
+                startMenu.TopPlayersText = text;
+                previousTopScores = text;
+
+                game.HsCoins = await GameScoreService.Current.GetUserTopScore();
+
+
             }
-            catch
-            {
-                Device.BeginInvokeOnMainThread(async () =>
-               await DisplayAlert("Error", "There was an error retrieving the top scores, please check your settings, internet connection", "OK"));
-            }
+             
         }
 
         private async void Game_FinishedGame(int result)
@@ -235,6 +243,7 @@ namespace SamplyGame
                 if (GameScoreService.Current != null)
                 {
                     await GameScoreService.Current.SubmitScoreAsync(result);
+                    game.HsCoins = await GameScoreService.Current.GetUserTopScore();
                 }
             }
             catch

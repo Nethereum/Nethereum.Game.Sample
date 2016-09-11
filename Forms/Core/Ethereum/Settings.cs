@@ -23,7 +23,7 @@ namespace SamplyGame.Ethereum
         private const string UrlKey = "url_key";
         private static readonly string UrlDefault = "https://morden.infura.io/aEcNY6wGN4KuEpoXQRxZ";
         private const string PrivatekeyKey = "privatekey_key";
-        private static readonly string PrivateKeyDefault = "0xaf98a1bdf2140578318e2c5e7d5956a3ee0a6732090c2991a9166a6639ad368f";
+        private static readonly string PrivateKeyDefault = "";
 
         #endregion
 
@@ -36,7 +36,7 @@ namespace SamplyGame.Ethereum
             }
             set
             {
-                AppSettings.AddOrUpdateValue<string>(UrlDefault, value);
+                AppSettings.AddOrUpdateValue<string>(UrlKey, value);
             }
         }
 
