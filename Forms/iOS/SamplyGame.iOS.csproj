@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{3A72E714-15CE-4706-BA99-E389FB7C9B2C}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SamplyGame.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SamplyGameiOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchUseRefCounting>True</MtouchUseRefCounting>
+    <OptimizePNGs>True</OptimizePNGs>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchSdkVersion>9.3</MtouchSdkVersion>
+    <MtouchProfiling>False</MtouchProfiling>
+    <MtouchFastDev>False</MtouchFastDev>
+    <MtouchUseLlvm>False</MtouchUseLlvm>
+    <MtouchUseThumb>False</MtouchUseThumb>
+    <MtouchEnableBitcode>False</MtouchEnableBitcode>
+    <MtouchUseSGen>False</MtouchUseSGen>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchFloat32>False</MtouchFloat32>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchSdkVersion>9.3</MtouchSdkVersion>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchProfiling>False</MtouchProfiling>
+    <MtouchFastDev>False</MtouchFastDev>
+    <MtouchUseLlvm>False</MtouchUseLlvm>
+    <MtouchUseThumb>False</MtouchUseThumb>
+    <MtouchEnableBitcode>False</MtouchEnableBitcode>
+    <MtouchUseSGen>False</MtouchUseSGen>
+    <MtouchUseRefCounting>False</MtouchUseRefCounting>
+    <OptimizePNGs>True</OptimizePNGs>
+    <MtouchTlsProvider>Default</MtouchTlsProvider>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchFloat32>False</MtouchFloat32>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IpaPackageName>
+    </IpaPackageName>
+    <OptimizePNGs>false</OptimizePNGs>
+    <MtouchOptimizePNGs>False</MtouchOptimizePNGs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchOptimizePNGs>False</MtouchOptimizePNGs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="..\Assets\Data\Icon.png">
+      <Link>Resources\Data\Icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Splashscreen.png">
+      <Link>Resources\Data\Splashscreen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Fonts\Anonymous Pro.ttf">
+      <Link>Resources\Data\Fonts\Anonymous Pro.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Fonts\Font.ttf">
+      <Link>Resources\Data\Fonts\Font.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Apple.xml">
+      <Link>Resources\Data\Materials\Apple.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Enemy3.xml">
+      <Link>Resources\Data\Materials\Enemy3.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Enemy3weapon.xml">
+      <Link>Resources\Data\Materials\Enemy3weapon.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Enemy4DD.xml">
+      <Link>Resources\Data\Materials\Enemy4DD.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Grass.xml">
+      <Link>Resources\Data\Materials\Grass.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\MachineGun.xml">
+      <Link>Resources\Data\Materials\MachineGun.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Monkey.xml">
+      <Link>Resources\Data\Materials\Monkey.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\Player1D.xml">
+      <Link>Resources\Data\Materials\Player1D.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Materials\PyramidMaterial.xml">
+      <Link>Resources\Data\Materials\PyramidMaterial.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Apple.mdl">
+      <Link>Resources\Data\Models\Apple.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Enemy3.mdl">
+      <Link>Resources\Data\Models\Enemy3.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Enemy3weapon.mdl">
+      <Link>Resources\Data\Models\Enemy3weapon.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Enemy4.mdl">
+      <Link>Resources\Data\Models\Enemy4.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Monkey.mdl">
+      <Link>Resources\Data\Models\Monkey.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Plane.mdl">
+      <Link>Resources\Data\Models\Plane.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Player1.mdl">
+      <Link>Resources\Data\Models\Player1.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\PyramidTree.mdl">
+      <Link>Resources\Data\Models\PyramidTree.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Models\Skull.mdl">
+      <Link>Resources\Data\Models\Skull.mdl</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\Explosion.pex">
+      <Link>Resources\Data\Particles\Explosion.pex</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\Explosion.png">
+      <Link>Resources\Data\Particles\Explosion.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\HeavyMissileExplosion.pex">
+      <Link>Resources\Data\Particles\HeavyMissileExplosion.pex</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\HeavyMissileExplosion.png">
+      <Link>Resources\Data\Particles\HeavyMissileExplosion.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\MissileTrace.pex">
+      <Link>Resources\Data\Particles\MissileTrace.pex</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\PlayerExplosion.pex">
+      <Link>Resources\Data\Particles\PlayerExplosion.pex</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Particles\PlayerExplosion.png">
+      <Link>Resources\Data\Particles\PlayerExplosion.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\PostProcess\FXAA3.xml">
+      <Link>Resources\Data\PostProcess\FXAA3.xml</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Sounds\BigExplosion.wav">
+      <Link>Resources\Data\Sounds\BigExplosion.wav</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Sounds\MachineGun.wav">
+      <Link>Resources\Data\Sounds\MachineGun.wav</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Sounds\Powerup.wav">
+      <Link>Resources\Data\Sounds\Powerup.wav</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Sounds\SmallExplosion.wav">
+      <Link>Resources\Data\Sounds\SmallExplosion.wav</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Apple.png">
+      <Link>Resources\Data\Textures\Apple.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Enemy3.png">
+      <Link>Resources\Data\Textures\Enemy3.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Enemy3weapon.png">
+      <Link>Resources\Data\Textures\Enemy3weapon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Enemy4DD.png">
+      <Link>Resources\Data\Textures\Enemy4DD.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Grass.dds">
+      <Link>Resources\Data\Textures\Grass.dds</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Monkey.png">
+      <Link>Resources\Data\Textures\Monkey.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Player1D.png">
+      <Link>Resources\Data\Textures\Player1D.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Pyramid.png">
+      <Link>Resources\Data\Textures\Pyramid.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\TreeUV2.png">
+      <Link>Resources\Data\Textures\TreeUV2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\xamarin.png">
+      <Link>Resources\Data\Textures\xamarin.png</Link>
+    </BundleResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.1\lib\netstandard1.3\crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EdjCase.JsonRpc.Client, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EdjCase.JsonRpc.Client.1.0.4\lib\netstandard1.1\EdjCase.JsonRpc.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EdjCase.JsonRpc.Core, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EdjCase.JsonRpc.Core.1.0.4\lib\portable45-net45+win8+wpa81\EdjCase.JsonRpc.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nethereum.Portable, Version=1.0.6057.30244, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nethereum.Portable.1.0.0-rc5\lib\portable45-net45+win8+wpa81\Nethereum.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.0-beta8\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.0-beta8\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Urho.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\UrhoSharp.Forms.1.1.125\lib\Xamarin.iOS10\Urho.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.0.107\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.0.107\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.0.107\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.3.0.107\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Assets\Data\Textures\UI.png">
+      <Link>Resources\Data\Textures\UI.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\Assets\Data\UI\DefaultStyle.xml">
+      <Link>Resources\UI\DefaultStyle.xml</Link>
+    </BundleResource>
+    <Content Include="Entitlements.plist" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Core\SamplyGame.csproj">
+      <Project>{7C4B3936-72F4-49E0-B5A7-E1284863C8C4}</Project>
+      <Name>SamplyGame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>
