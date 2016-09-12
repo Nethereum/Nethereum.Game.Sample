@@ -1,7 +1,7 @@
 ﻿{
   "supports": {},
   "dependencies": {
-    "Nethereum.Portable": "1.0.0-rc5",
+    "Nethereum.Portable": "1.0.0-rc6",
     "UrhoSharp.Forms": "1.1.125",
     "Xam.Plugins.Settings": "2.5.0-beta8"
   },

@@ -274,8 +274,8 @@
       <HintPath>..\packages\EdjCase.JsonRpc.Core.1.0.4\lib\portable45-net45+win8+wpa81\EdjCase.JsonRpc.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Nethereum.Portable, Version=1.0.6057.30244, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nethereum.Portable.1.0.0-rc5\lib\portable45-net45+win8+wpa81\Nethereum.Portable.dll</HintPath>
+    <Reference Include="Nethereum.Portable, Version=1.0.6099.23401, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nethereum.Portable.1.0.0-rc6\lib\portable45-net45+win8+wpa81\Nethereum.Portable.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
