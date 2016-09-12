@@ -16,9 +16,7 @@ namespace SamplyGame
     {
         public App()
         {
-            var navPage = new NavigationPage(new UrhoPage());
-      
-            MainPage = navPage;
+            MainPage = new UrhoPage();
         }
     }
 

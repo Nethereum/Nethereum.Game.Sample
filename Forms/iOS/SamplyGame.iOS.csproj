@@ -324,6 +324,9 @@
     <BundleResource Include="..\Assets\Data\UI\DefaultStyle.xml">
       <Link>Resources\UI\DefaultStyle.xml</Link>
     </BundleResource>
+    <BundleResource Include="..\Assets\Data\Textures\Player1D-ujo.png">
+      <Link>Resources\Data\Textures\Player1D-ujo.png</Link>
+    </BundleResource>
     <Content Include="Entitlements.plist" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
