@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Urho;
 using Urho.Forms;
+using Windows.Storage;
 using Xamarin.Forms;
 
 namespace SamplyGame
@@ -16,7 +17,7 @@ namespace SamplyGame
         SamplyGame game;
         SettingsPage settingsPage;
         string previousTopScores;
-        public static string[] ResourcePacksPaths { get; set; }
+        public static string[] ResourcePacksPaths { get; set; } = new string[] { };
         public static string AssetsPath { get; set; } = "Data";
 
         public UrhoPage()
@@ -51,9 +52,9 @@ namespace SamplyGame
 
         async Task StartUrhoApp()
         {
+            
             if (game == null)
-            {
-                
+            {   
                 game = await urhoSurface.Show<SamplyGame>(new ApplicationOptions(assetsFolder: AssetsPath) { Height = 1024, Width = 576, Orientation = ApplicationOptions.OrientationType.Portrait, ResourcePackagesPaths = ResourcePacksPaths });
                 game.FinishedGame += Game_FinishedGame;
                 game.NewStartMenu += Game_NewStartMenu;

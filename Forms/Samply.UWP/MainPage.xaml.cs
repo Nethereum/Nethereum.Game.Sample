@@ -21,6 +21,7 @@ namespace Samply.UWP
         public MainPage()
         {
             this.InitializeComponent();
+            SamplyGame.UrhoPage.AssetsPath = null;
             SamplyGame.UrhoPage.ResourcePacksPaths = new[] { "Data.pak" };
             LoadApplication(new SamplyGame.App());
         }
