@@ -74,6 +74,11 @@ namespace SamplyGame
 				return;
 
 			var input = Application.Current.Input;
+
+            //TODO Handle joystick
+            //JoystickState x;
+            //input.TryGetJoystickState(1, out x);
+            
 			var aircraft = Node;
 
 			int positionX = 0, positionY = 0;
@@ -94,7 +99,7 @@ namespace SamplyGame
 				positionX = mousePos.X;
 				positionY = mousePos.Y;
 				hasInput = true;
-			}
+			} //TODO: Joystick
 
 			if (hasInput)
 			{

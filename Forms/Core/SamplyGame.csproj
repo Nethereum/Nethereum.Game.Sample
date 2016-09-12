@@ -41,6 +41,8 @@
     <Compile Include="Assets.cs" />
     <Compile Include="Ethereum\GameScoreService.cs" />
     <Compile Include="Ethereum\Settings.cs" />
+    <Compile Include="SettingsPage.cs" />
+    <Compile Include="UrhoPage.cs" />
     <Compile Include="Weapons\Apple.cs" />
     <Compile Include="Aircrafts\Enemies\Enemy.cs" />
     <Compile Include="Aircrafts\Enemies\EnemyXamonkey.cs" />
