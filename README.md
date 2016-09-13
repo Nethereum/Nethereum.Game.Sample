@@ -6,6 +6,8 @@ A simple [smart contract deployed to Ethereum](https://github.com/Nethereum/Neth
 
 More information on UrhoSharp can be found [on the Xamarin website](https://developer.xamarin.com/guides/cross-platform/urho/introduction/), and in github [the original sample](https://github.com/xamarin/urho-samples/tree/master/SamplyGame). Kudos and all the credit goes to the Xamarin guys, specially @EgorBo and @migueldeIcaza for the great engine and sample.
 
+![Screenshot](Screenshots/Video.gif)
+
 ##Play along!!
 There is an android package [here](https://github.com/Nethereum/Nethereum.Game.Sample/tree/master/Forms/Droid).
 
@@ -23,4 +25,4 @@ This video gives you a quick introduction on the sample:
 
 [![Cross platform game development with Ethereum using UrhoSharp and .Net](http://img.youtube.com/vi/WtpmCmP11Iw/0.jpg)](https://www.youtube.com/watch?v=WtpmCmP11Iw "Cross platform game development with Ethereum using UrhoSharp and .Net")
 
-![Screenshot](Screenshots/Video.gif)
+
