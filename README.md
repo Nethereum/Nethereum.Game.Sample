@@ -1,4 +1,4 @@
-#Nethereum Game Sample
+# Nethereum Game Sample
 
 This sample game demonstrates how to integrate Nethereum with the UrhoSharp SamplyGame (game sample) to create a cross-platform game that interacts with Ethereum.
 
@@ -8,7 +8,7 @@ More information on UrhoSharp can be found [on the Xamarin website](https://deve
 
 ![Screenshot](Screenshots/Video.gif)
 
-##Play along!!
+## Play along!!
 There is an android package [here](https://github.com/Nethereum/Nethereum.Game.Sample/tree/master/Forms/Droid).
 
 ##Forms or Original
