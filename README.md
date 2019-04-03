@@ -11,7 +11,7 @@ More information on UrhoSharp can be found [on the Xamarin website](https://deve
 ## Play along!!
 There is an android package [here](https://github.com/Nethereum/Nethereum.Game.Sample/tree/master/Forms/Droid).
 
-##Forms or Original
+## Forms or Original
 A newer version of the sample (which will be maintained if we do any changes) is the Xamarin.Forms version. This demonstrates decoupling the logic from the game, simplification of running other threads in the background, and support of copy and paste which was not provided in the Urho UI. The sample is still very simple, so not MVVM or dependecy injection has been added.
 
 ## Small video tutorial
@@ -25,4 +25,4 @@ This video gives you a quick introduction on the sample:
 
 [![Cross platform game development with Ethereum using UrhoSharp and .Net](http://img.youtube.com/vi/WtpmCmP11Iw/0.jpg)](https://www.youtube.com/watch?v=WtpmCmP11Iw "Cross platform game development with Ethereum using UrhoSharp and .Net")
 
-
+Note: in this sample, a special INFURA API key is used: `7238211010344719ad14a89db874158c`. If you wish to use this sample in your own project you’ll need to [sign up on INFURA](https://infura.io/register) and use your own key.

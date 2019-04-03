@@ -21,7 +21,9 @@ namespace SamplyGame.Ethereum
         #region Setting Constants
 
         private const string UrlKey = "url_key";
-        private static readonly string UrlDefault = "https://morden.infura.io/aEcNY6wGN4KuEpoXQRxZ";
+        private static readonly string UrlDefault = "
+goerli.infura.io/v3/7238211010344719ad14a89db874158c
+";
         private const string PrivatekeyKey = "privatekey_key";
         private static readonly string PrivateKeyDefault = "";
 
