@@ -20,7 +20,9 @@ namespace SamplyGame.Ethereum
     
     public class GameScoreService
     {
-        public static string DEFAULT_MORDEN = "https://morden.infura.io/aEcNY6wGN4KuEpoXQRxZ";
+        public static string DEFAULT_MORDEN = "
+goerli.infura.io/v3/7238211010344719ad14a89db874158c
+";
        
         //public static string PRIVATE_KEY = "0x822b4de0c646385ab8d1a29313e01a31c50d79e634809b4c90e67b00a4328401";
         public static string PRIVATE_KEY = "0xaf98a1bdf2140578318e2c5e7d5956a3ee0a6732090c2991a9166a6639ad368f";
